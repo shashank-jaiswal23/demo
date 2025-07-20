@@ -1,0 +1,131 @@
+/* UI Library Base Styles */
+
+/* Styles moved from styled-jsx blocks */
+.hr {
+  width: calc(100% - 3rem);
+  margin: auto;
+}
+
+.checker {
+  top: 100vh;
+  width: 10px;
+  height: 10px;
+}
+
+/* Typography */
+:root {
+  --grey: #6C6E70;
+  --light-grey: #c7c9cb;
+  --sans: "CN Sans", "Helvetica Neue";
+}
+
+.serif, h1, h2, h3, h4, h5 {
+  font-family: "MillerDisplay", serif;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: var(--sans);
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background-color: yellow;
+  color: black;
+}
+
+p, li {
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+.small-richtext p,
+.small-body p,
+.small-body li {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.font-label {
+  font-size: 14px;
+  transition: 0.3s ease-out color, 0.3s ease-out opacity;
+}
+
+.font-small {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.font-tiny {
+  font-size: 12px;
+}
+
+.text-white p,
+.text-white .font-label,
+.text-white .font-small {
+  color: white;
+}
+
+.text-black p,
+.text-black .font-label,
+.text-black .font-small {
+  color: black;
+}
+
+p, .font-small, .font-label, li {
+  color: var(--grey);
+}
+
+.bg-black .font-label {
+  color: var(--light-grey);
+}
+
+@media (max-width: 750px) {
+  h1 { font-size: 38px; }
+  h2 { font-size: 30px; }
+  h3 { font-size: 24px; }
+}

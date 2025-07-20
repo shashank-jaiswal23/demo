@@ -5,4 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Styles moved from styled-jsx blocks */
+.hr {
+  width: calc(100% - 3rem);
+  margin: auto;
+}
 
+.checker {
+  top: 100vh;
+  width: 10px;
+  height: 10px;
+}

@@ -25,14 +25,6 @@ export default function Section(props) {
 		<section id={id} className={"mx-auto relative"}>
 			<div>{children}</div>
 			<span className="checker absolute" />
-
-			<style jsx>{`
-				span {
-					top: 100vh;
-					width: 10px;
-					height: 10px;
-				}
-			`}</style>
 		</section>
 	)
 }

@@ -100,13 +100,6 @@ export function MediaTextCard(props) {
           </div>
         </div>
       </Section>
-
-      <style jsx>{`
-        .hr {
-          width: calc(100% - 3rem);
-          margin: auto;
-        }
-      `}</style>
     </>
   );
 }

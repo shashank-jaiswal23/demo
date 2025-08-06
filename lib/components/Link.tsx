@@ -26,7 +26,7 @@ const SvgArrowDown = () => (
 );
 
 // Text Variants
-export function LinkWithPlus({ title }: { title: string }) {
+export function LinkWithPlus({ title }) {
   return (
     <span className="flex items-center font-label leading-none px-2 pt-2 pb-2 border hover:opacity-50 transition-opacity duration-300">
       {title}
@@ -34,7 +34,7 @@ export function LinkWithPlus({ title }: { title: string }) {
   );
 }
 
-export function LinkWithDownArrow({ title }: { title: string }) {
+export function LinkWithDownArrow({ title }) {
   return (
     <span className="flex items-center font-label leading-none px-2 pt-2 pb-2 border hover:opacity-50 transition-opacity duration-300">
       {title} <SvgArrowDown />
@@ -42,7 +42,7 @@ export function LinkWithDownArrow({ title }: { title: string }) {
   );
 }
 
-export function LinkWithArrow({ title }: { title: string }) {
+export function LinkWithArrow({ title }) {
   return (
     <span className="flex items-center font-label leading-none px-2 pt-2 pb-2 border mt-2 hover:opacity-50 transition-opacity duration-300">
       {title} <SvgArrow />
@@ -51,15 +51,7 @@ export function LinkWithArrow({ title }: { title: string }) {
 }
 
 // Core Link Components
-export interface InternalLinkProps {
-  href?: string;
-  children?: React.ReactNode;
-  title?: string | { value: string };
-  className?: string;
-  onClick?: () => void;
-}
-
-export function InternalLink(props: InternalLinkProps) {
+export function InternalLink(props) {
   const { href = "/", children, title, className, onClick } = props;
   const safeTitle = typeof title === "string" ? title : title?.value;
 
@@ -70,15 +62,7 @@ export function InternalLink(props: InternalLinkProps) {
   );
 }
 
-export interface ExternalLinkProps {
-  href?: string;
-  target?: string;
-  children?: React.ReactNode;
-  title?: string;
-  className?: string;
-}
-
-export function ExternalLink(props: ExternalLinkProps) {
+export function ExternalLink(props) {
   const { href, target = "_blank", children, title, className } = props;
 
   return (
@@ -93,14 +77,7 @@ export function ExternalLink(props: ExternalLinkProps) {
   );
 }
 
-export interface LinkProps {
-  href?: string;
-  title?: string | { value: string; sheetUrl?: string };
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export function Link(props: LinkProps) {
+export function Link(props) {
   const targetIsExternal = useMemo(() => props.href?.includes("http"), [props.href]);
 
   const relativeHref = useMemo(() => {
@@ -128,7 +105,7 @@ export function Link(props: LinkProps) {
     );
   }
 
-    const sanitizedProps = {
+  const sanitizedProps = {
     ...props,
     title: typeof props.title === "string" ? props.title : props.title?.value,
   };

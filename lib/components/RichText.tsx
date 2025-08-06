@@ -1,11 +1,6 @@
 import React from 'react';
 
-export interface RichTextProps {
-  text: string;
-  className?: string;
-}
-
-export function RichText({ text, className }: RichTextProps) {
+export function RichText({ text, className }) {
   if (!text) return null;
 
   return (

@@ -12,11 +12,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
+    "noEmit": true,
     "jsx": "react-jsx",
-    "declaration": true,
-    "outDir": "dist",
-    "declarationDir": "dist/types"
+    "declaration": false
   },
   "include": [
     "lib/**/*"

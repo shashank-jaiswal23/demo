@@ -1,13 +1,7 @@
 import React from 'react';
 import classNames from "classnames";
 
-export interface VideoProps {
-  url?: string;
-  className?: string;
-  displayVideoPlayer?: boolean;
-}
-
-export function Video(props: VideoProps) {
+export function Video(props) {
   const {
     url,
     className,

@@ -1,17 +1,7 @@
 import React from 'react';
 import classNames from "classnames";
 
-export interface ImageProps {
-  alt?: string;
-  url?: string;
-  className?: string;
-  height?: number;
-  width?: number;
-  lazy?: 'eager' | 'lazy';
-  caption?: string;
-}
-
-export function Image(props: ImageProps) {
+export function Image(props) {
   const {
     alt = "",
     url,

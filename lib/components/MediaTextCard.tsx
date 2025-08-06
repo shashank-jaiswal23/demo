@@ -5,36 +5,7 @@ import { Link } from './Link';
 import { Section } from './Section';
 import { File } from './File';
 
-export interface MediaTextCardProps {
-  media?: {
-    data?: {
-      id?: number;
-      attributes?: {
-        url?: string;
-        mime?: string;
-        width?: number;
-        height?: number;
-        formats?: any;
-        [key: string]: any;
-      };
-    };
-  };
-  title?: string | { value: string; sheetUrl?: string };
-  text?: string | { value: string; sheetUrl?: string };
-  link?: {
-    Title: string;
-    URL: string;
-  };
-  layout?: 'Left' | 'Right';
-  size?: 'Small' | 'Medium' | 'Large' | 'Full' | 'Padding';
-  margin?: 'None' | 'Regular' | 'Large';
-  displaySeperator?: boolean;
-  navSlug?: string;
-  colorTheme?: 'Default' | 'Grey' | 'Black' | 'Blur';
-  className?: string;
-}
-
-export function MediaTextCard(props: MediaTextCardProps) {
+export function MediaTextCard(props) {
   const {
     media,
     title,
@@ -43,7 +14,6 @@ export function MediaTextCard(props: MediaTextCardProps) {
     layout = 'Left',
     size = 'Medium',
     margin = 'Regular',
-    displaySeperator,
     navSlug,
     colorTheme = 'Default',
     className
@@ -103,26 +73,22 @@ export function MediaTextCard(props: MediaTextCardProps) {
           >
             {typeof title === "string" && <h2>{title}</h2>}
             {title && typeof title === "object" && title.value && (
-              <a
+              <button
                 className="editable block relative"
                 onClick={() => title.sheetUrl && window.open(title.sheetUrl, "sheet")}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <h2>{title.value}</h2>
-              </a>
+              </button>
             )}
 
             {typeof text === "string" && <RichText text={text} />}
             {text && typeof text === "object" && text.value && (
-              <a
+              <button
                 className="editable block relative"
                 onClick={() => text.sheetUrl && window.open(text.sheetUrl, "sheet")}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <RichText text={text.value} />
-              </a>
+              </button>
             )}
 
             {link && (

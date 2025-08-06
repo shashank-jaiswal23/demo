@@ -2,23 +2,7 @@ import React from 'react';
 import { Image } from "./Image";
 import { Video } from "./Video";
 
-export interface FileProps {
-  className?: string;
-  displayVideoPlayer?: boolean;
-  data?: {
-    id?: number;
-    attributes?: {
-      url?: string;
-      mime?: string;
-      width?: number;
-      height?: number;
-      [key: string]: any;
-    };
-  };
-  type?: string;
-}
-
-export function File({ className, displayVideoPlayer, data, type }: FileProps) {
+export function File({ className, displayVideoPlayer, data, type }) {
   if (!data?.attributes) return null;
 
   return (

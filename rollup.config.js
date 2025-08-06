@@ -33,5 +33,5 @@ export default {
       minimize: true
     })
   ],
-  external: ['react', 'react-dom', 'react-router-dom', 'react-intersection-observer']
+  external: ['react', 'react-dom', 'react-intersection-observer']
 };

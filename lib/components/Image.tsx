@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from "classnames";
 
 export function Image(props) {
   const {
@@ -19,7 +18,7 @@ export function Image(props) {
       <img
         src={url}
         alt={alt}
-        className={classNames(className)}
+        className={className}
         loading={lazy === "eager" ? "eager" : "lazy"}
         height={height}
         width={width}

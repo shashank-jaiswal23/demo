@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from "classnames";
 import { Link } from './Link';
 import { Section } from './Section';
 import { RichText } from './RichText';
@@ -8,9 +7,7 @@ export function CenteredText(props) {
   const { title, text, link, colorTheme, navSlug } = props;
 
   return (
-    <Section id={navSlug} className={classNames(
-      colorTheme === "Black" && "bg-black text-white"
-    )}>
+    <Section id={navSlug} className={colorTheme === "Black" ? "bg-black text-white" : ""}>
       <div className="mx-auto max-w-sm py-32 px-4 md:px-6">
         {title && <h2>{title}</h2>}
 

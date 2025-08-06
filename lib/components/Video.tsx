@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from "classnames";
 
 export function Video(props) {
   const {
@@ -12,7 +11,7 @@ export function Video(props) {
 
   return (
     <video
-      className={classNames(className)}
+      className={className}
       src={url}
       controls={displayVideoPlayer}
       autoPlay={!displayVideoPlayer}

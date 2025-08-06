@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import classNames from "classnames";
 
 // SVG Components
 const SvgArrow = () => (
@@ -56,7 +55,7 @@ export function InternalLink(props) {
   const safeTitle = typeof title === "string" ? title : title?.value;
 
   return (
-    <a href={href} className={classNames("", className)} onClick={onClick}>
+    <a href={href} className={className} onClick={onClick}>
       {children ? children : <LinkWithArrow title={safeTitle || ""} />}
     </a>
   );
@@ -67,7 +66,7 @@ export function ExternalLink(props) {
 
   return (
     <a
-      className={classNames("", className)}
+      className={className}
       href={href}
       rel="noopener noreferrer"
       target={target}

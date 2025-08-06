@@ -1,9 +1,12 @@
 import React from 'react';
-import classNames from 'classnames';
+
+function combineClasses(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 
 export function Section({ id, className, children }) {
   return (
-    <section id={id} className={classNames(className, "mx-auto relative")}>
+    <section id={id} className={combineClasses(className, "mx-auto relative")}>
       <div>{children}</div>
       <span className="checker absolute" />
     </section>

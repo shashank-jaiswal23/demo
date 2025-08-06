@@ -20,6 +20,8 @@ Import the CSS file in your main application file:
 import 'your-ui-library/dist/index.css';
 ```
 
+**Important**: This library includes all necessary CSS styles and does not require Tailwind CSS or any other CSS framework to work properly.
+
 ### Components
 
 #### MediaTextCard
@@ -148,21 +150,7 @@ This library is built with TypeScript and includes type definitions. All compone
 
 ## Styling
 
-The library uses Tailwind CSS classes. Make sure you have Tailwind CSS configured in your project, or the components may not display correctly.
-
-### Required Tailwind Configuration
-
-Add the library path to your `tailwind.config.js`:
-
-```javascript
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/your-ui-library/dist/**/*.{js,ts,jsx,tsx}"
-  ],
-  // ... rest of your config
-}
-```
+The library includes all necessary CSS styles and works independently without requiring Tailwind CSS or any other CSS framework. Simply import the CSS file as shown in the Basic Setup section.
 
 ## Development
 

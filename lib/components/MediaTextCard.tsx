@@ -1,9 +1,12 @@
 import React from 'react';
-import classNames from 'classnames';
 import { RichText } from './RichText';
 import { Link } from './Link';
 import { Section } from './Section';
 import { File } from './File';
+
+function combineClasses(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 
 export function MediaTextCard(props) {
   const {
@@ -24,7 +27,7 @@ export function MediaTextCard(props) {
       {size === "Medium" && <div className="hr" />}
       <Section
         id={navSlug}
-        className={classNames(
+        className={combineClasses(
           "relative overflow-hidden",
           margin !== "None" && "my-8 md:my-16",
           colorTheme === "Grey" && "bg-dark-grey text-white",
@@ -35,7 +38,7 @@ export function MediaTextCard(props) {
         )}
       >
         <div
-          className={classNames(
+          className={combineClasses(
             "flex flex-wrap items-center mx-auto",
             size === "Medium" && "max-w-md px-4 md:px-6"
           )}
@@ -49,7 +52,7 @@ export function MediaTextCard(props) {
 
           {media && (
             <div
-              className={classNames(
+              className={combineClasses(
                 "relative mb-8 md:mb-0",
                 size === "Medium" ? "w-full md:w-7/12" : "w-full md:w-6/12",
                 size === "Padding" && "py-0",
@@ -61,7 +64,7 @@ export function MediaTextCard(props) {
           )}
 
           <div
-            className={classNames(
+            className={combineClasses(
               "relative max-w-sm",
               layout === "Right" ? "md:order-first md:pr-16" : "md:pl-16",
               size === "Medium" ? "md:w-5/12" : "md:w-6/12",

@@ -1,9 +1,12 @@
 import React, { useMemo } from "react"
 import { Link } from "./Link"
 import { useInView } from "react-intersection-observer"
-import classNames from "classnames"
 import { File } from "./File"
 import { Section } from "./Section"
+
+function combineClasses(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
 
 export function lowercaseKeys(obj) {
   return Object.fromEntries(
@@ -85,12 +88,12 @@ export function Marquee(props) {
   });
 
   return (
-    <Section className={classNames("overflow-hidden bg-black relative")}>
-      <div className={classNames("marquee-section", `size-${size}`)}>
+    <Section className="overflow-hidden bg-black relative">
+      <div className={combineClasses("marquee-section", `size-${size?.toLowerCase()}`)}>
         <div ref={ref}>
           <div
             data-animating-width
-            className={classNames(inView && "in-view transform-gpu", "flex")}
+            className={combineClasses(inView && "marquee-animate transform-gpu", "flex")}
             style={{
               willChange: "transform",
               width: (width || 100) * 4 + "rem",
@@ -122,38 +125,6 @@ export function Marquee(props) {
             />
           </div>
         </div>
-
-        <style>{`
-          [data-animating-width].in-view {
-            animation: 60s linear marquee infinite;
-            will-change: transform;
-          }
-
-          [data-animating-width].in-view:hover {
-            animation-play-state: paused;
-          }
-
-          @keyframes marquee {
-            from {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(-50%);
-            }
-          }
-
-          @media (max-width: 700px) {
-            .marquee-section{
-              transform: scale(0.8) translateY(20%);
-              margin-top: -20%;
-            }
-
-            .marquee-section.size-large {
-              transform: scale(0.7) translateY(30%);
-              margin-top: -20%;
-            }
-          }
-        `}</style>
       </div>
     </Section>
   );

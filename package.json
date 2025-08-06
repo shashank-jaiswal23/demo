@@ -25,6 +25,7 @@
     "classnames": "^2.5.1",
     "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.7.0",
+    "web-vitals": "^5.1.0",
     "your-ui-library-react": "^0.1.1"
   },
   "scripts": {

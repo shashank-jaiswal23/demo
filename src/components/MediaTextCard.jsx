@@ -70,26 +70,22 @@ export function MediaTextCard(props) {
           >
             {typeof title === "string" && <h2>{title}</h2>}
             {title?.value && (
-              <a
+              <button
                 className="editable block relative"
                 onClick={() => window.open(title.sheetUrl, "sheet")}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <h2>{title.value}</h2>
-              </a>
+              </button>
             )}
 
             {typeof text === "string" && <RichText text={text} />}
             {text?.value && (
-              <a
+              <button
                 className="editable block relative"
                 onClick={() => window.open(text.sheetUrl, "sheet")}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <RichText text={text.value} />
-              </a>
+              </button>
             )}
 
             {link && (

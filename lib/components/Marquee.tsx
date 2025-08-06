@@ -34,7 +34,7 @@ export interface Marquee {
 function MarqueeItem(props: MarqueeItemProps) {
   const { image, backgroundImage, uRL, size } = props
   return (
-    <Link href={uRL || "/brands"}>
+    <Link href={uRL || "/brands"} passHref legacyBehavior>
       <a className={size === "Large" ? "w-80" : "w-56"}>
         <div className="w-full relative">
           <div className="aspect-w-1 aspect-h-1 flex flex-wrap justify-center items-center">

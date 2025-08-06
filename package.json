@@ -1,6 +1,6 @@
 {
-  "name": "your-ui-library",
-  "version": "0.1.0",
+  "name": "your-ui-library-react",
+  "version": "0.1.5",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
@@ -24,7 +24,8 @@
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.5.1",
     "react-intersection-observer": "^9.16.0",
-    "react-router-dom": "^7.7.0"
+    "react-router-dom": "^7.7.0",
+    "your-ui-library-react": "^0.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

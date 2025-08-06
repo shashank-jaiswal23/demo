@@ -96,6 +96,18 @@ function App() {
 }
 ```
 
+### Centered Text
+
+```jsx
+    <CenteredText
+      title="Centered Text Example"
+      text="This is an example of centered text with a link."
+      link={{ Title: "Click Here", URL: "https://example.com" }}
+      navSlug="centered-text"
+      colorTheme="Black"
+    />
+```
+
 #### Image and Video
 
 ```jsx

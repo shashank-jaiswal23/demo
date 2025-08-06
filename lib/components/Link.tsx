@@ -128,5 +128,9 @@ export function Link(props: LinkProps) {
     );
   }
 
-  return <>{targetIsExternal ? <ExternalLink {...props} /> : <InternalLink {...props} />}</>;
+    const sanitizedProps = {
+    ...props,
+    title: typeof props.title === "string" ? props.title : props.title?.value,
+  };
+  return <>{targetIsExternal ? <ExternalLink {...sanitizedProps} /> : <InternalLink {...sanitizedProps} />}</>;
 }

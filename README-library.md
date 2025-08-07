@@ -5,9 +5,9 @@ A reusable React component library built with TypeScript and Tailwind CSS.
 ## Installation
 
 ```bash
-npm install your-ui-library
+npm install your-ui-library-react
 # or
-yarn add your-ui-library
+yarn add your-ui-library-react
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ yarn add your-ui-library
 Import the CSS file in your main application file:
 
 ```javascript
-import 'your-ui-library/dist/index.css';
+import 'your-ui-library-react/dist/index.css';
 ```
 
 **Important**: This library includes all necessary CSS styles and does not require Tailwind CSS or any other CSS framework to work properly.
@@ -27,7 +27,7 @@ import 'your-ui-library/dist/index.css';
 #### MediaTextCard
 
 ```jsx
-import { MediaTextCard } from 'your-ui-library';
+import { MediaTextCard } from 'your-ui-library-react';
 
 function App() {
   const mediaData = {
@@ -58,7 +58,7 @@ function App() {
 #### Section
 
 ```jsx
-import { Section } from 'your-ui-library';
+import { Section } from 'your-ui-library-react';
 
 function App() {
   return (
@@ -73,7 +73,7 @@ function App() {
 #### RichText
 
 ```jsx
-import { RichText } from 'your-ui-library';
+import { RichText } from 'your-ui-library-react';
 
 function App() {
   return (
@@ -85,7 +85,7 @@ function App() {
 #### Link Components
 
 ```jsx
-import { Link, LinkWithArrow, ExternalLink } from 'your-ui-library';
+import { Link, LinkWithArrow, ExternalLink } from 'your-ui-library-react';
 
 function App() {
   return (
@@ -113,7 +113,7 @@ function App() {
 #### Image and Video
 
 ```jsx
-import { Image, Video, File } from 'your-ui-library';
+import { Image, Video, File } from 'your-ui-library-react';
 
 function App() {
   return (
